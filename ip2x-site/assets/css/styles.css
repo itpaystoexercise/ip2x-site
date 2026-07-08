@@ -629,13 +629,13 @@ footer { background: var(--navy-deep); padding: 48px 0 36px; border-top: 1px sol
 }
 .avatar-card .figure {
   aspect-ratio: 1 / 1;
-  background-color: rgba(191,228,249,0.05);
-  background-size: 200% 200%;
+  background-color: #edf0f4; /* matches the cleaned avatar background */
+  background-size: cover;
   background-repeat: no-repeat;
-  background-position: 0% 100%; /* bottom-left quadrant = full-body front */
+  background-position: center bottom;
 }
-.avatar-card.pep .figure { background-image: url('../img/avatars/pep.jpg'); }
-.avatar-card.pip .figure { background-image: url('../img/avatars/pip.jpg'); background-color: rgba(255,209,234,0.05); }
+.avatar-card.pep .figure { background-image: url('../img/avatars/pep-front.png'); }
+.avatar-card.pip .figure { background-image: url('../img/avatars/pip-front.png'); }
 .avatar-card.doc .figure {
   background: linear-gradient(180deg, var(--navy-card) 0%, var(--navy-deep) 100%);
   display: flex; align-items: center; justify-content: center;
@@ -686,6 +686,38 @@ footer { background: var(--navy-deep); padding: 48px 0 36px; border-top: 1px sol
   font-weight: 700;
 }
 .avatar-card.pip .role-list li::before { color: var(--light-pink); }
+
+/* Shared box — comments that apply to both Pep & Pip */
+.avatars-shared {
+  max-width: 880px;
+  margin: 20px auto 0;
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  background: var(--navy-card);
+  padding: clamp(24px, 3vw, 34px);
+}
+.avatars-shared .eyebrow { display: block; margin-bottom: 14px; }
+.avatars-shared .role-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2px 32px;
+}
+@media (max-width: 640px) { .avatars-shared .role-list { grid-template-columns: 1fr; } }
+.avatars-shared .role-list li {
+  font-size: 14.5px;
+  line-height: 1.5;
+  color: rgba(255,255,255,0.82);
+  padding: 6px 0 6px 18px;
+  position: relative;
+}
+.avatars-shared .role-list li::before {
+  content: '·';
+  position: absolute;
+  left: 4px; top: 6px;
+  color: var(--light-blue);
+  font-weight: 700;
+}
 
 /* Performance dashboard preview */
 .dashboard-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
