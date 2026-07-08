@@ -14,7 +14,7 @@
   --text-quiet:  rgba(255, 255, 255, 0.42);
   --line:        rgba(191, 228, 249, 0.14);
   --line-strong: rgba(191, 228, 249, 0.32);
-  --font-display: 'Bricolage Grotesque', system-ui, sans-serif;
+  --font-display: 'Playfair Display', Georgia, serif;
   --font-body:    'Manrope', system-ui, sans-serif;
   --font-italic:  'Newsreader', Georgia, serif;
   --max:         1200px;
