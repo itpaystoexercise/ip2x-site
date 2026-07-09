@@ -719,6 +719,38 @@ footer { background: var(--navy-deep); padding: 48px 0 36px; border-top: 1px sol
   font-weight: 700;
 }
 
+/* Ask-your-own-question box (FAQ) */
+.ask-box {
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--light-blue);
+  border-radius: var(--r-lg);
+  background: linear-gradient(180deg, rgba(191,228,249,0.08), rgba(191,228,249,0.02));
+  padding: clamp(28px, 4vw, 44px);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(24px, 4vw, 48px);
+  align-items: center;
+}
+@media (max-width: 820px) { .ask-box { grid-template-columns: 1fr; } }
+.ask-box h2 { margin-top: 12px; }
+.ask-box p { margin-top: 14px; color: var(--text-mute); line-height: 1.55; font-size: 14.5px; }
+.ask-form { display: flex; flex-direction: column; gap: 14px; }
+.ask-form textarea {
+  width: 100%;
+  background: rgba(0,0,0,0.25);
+  border: 1px solid var(--line);
+  border-radius: var(--r-md, 12px);
+  color: var(--white);
+  font-family: var(--font-body, inherit);
+  font-size: 15px;
+  line-height: 1.5;
+  padding: 14px 16px;
+  resize: vertical;
+}
+.ask-form textarea::placeholder { color: rgba(255,255,255,0.4); }
+.ask-form textarea:focus { outline: none; border-color: var(--light-blue); }
+.ask-form .btn { align-self: flex-start; }
+
 /* Reporting callout — "reporting is what sets us apart" (partner pages) */
 .reporting-callout {
   border: 1px solid var(--line);
