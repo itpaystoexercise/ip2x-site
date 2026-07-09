@@ -85,8 +85,6 @@ h3 { font-size: clamp(20px, 2vw, 26px); font-weight: 600; line-height: 1.25; }
   line-height: 1.55;
 }
 .accent {
-  font-family: var(--font-italic);
-  font-style: italic;
   font-weight: 400;
   color: var(--light-blue);
 }
@@ -206,8 +204,7 @@ h3 { font-size: clamp(20px, 2vw, 26px); font-weight: 600; line-height: 1.25; }
 @media (max-width: 700px) { .reveal::before, .reveal::after { display: none; } }
 .reveal .eyebrow { color: rgba(5,10,48,0.55); }
 .reveal-headline {
-  font-family: var(--font-italic);
-  font-style: italic;
+  font-family: var(--font-display);
   font-weight: 400;
   font-size: clamp(48px, 8vw, 100px);
   line-height: 1.0;
@@ -458,8 +455,6 @@ section.block { padding: var(--section-y) 0; position: relative; }
   padding: clamp(64px, 9vw, 120px) 0;
 }
 .final-cta h2 {
-  font-family: var(--font-italic);
-  font-style: italic;
   font-weight: 400;
   color: var(--navy);
   font-size: clamp(36px, 5.5vw, 60px);
@@ -523,8 +518,7 @@ footer { background: var(--navy-deep); padding: 48px 0 36px; border-top: 1px sol
 .audience-card:nth-child(3)::before { background: var(--light-blue); opacity: 0.6; }
 .audience-card .who { font-size: 13.5px; color: var(--text-mute); margin-bottom: 14px; }
 .audience-card .pitch {
-  font-family: var(--font-italic);
-  font-style: italic;
+  font-family: var(--font-display);
   font-weight: 400;
   font-size: clamp(22px, 2.4vw, 28px);
   line-height: 1.2;
@@ -624,7 +618,7 @@ footer { background: var(--navy-deep); padding: 48px 0 36px; border-top: 1px sol
   background: rgba(191,228,249,0.04);
   margin-bottom: 32px;
 }
-.pull-quote em { font-family: var(--font-italic); font-style: italic; color: var(--light-blue); font-weight: 400; }
+.pull-quote em { font-style: normal; color: var(--light-blue); font-weight: 400; }
 
 /* Pep, Pip & Dr Nic — Meet The Avatars */
 .avatars-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
@@ -727,6 +721,29 @@ footer { background: var(--navy-deep); padding: 48px 0 36px; border-top: 1px sol
   left: 4px; top: 6px;
   color: var(--light-blue);
   font-weight: 700;
+}
+
+/* Research Library (research page) */
+.research-list { list-style: none; display: grid; gap: 0; max-width: 860px; }
+.research-item { padding: 22px 0; border-bottom: 1px solid var(--line); }
+.research-item:first-child { padding-top: 4px; }
+.research-title {
+  font-family: var(--font-display);
+  font-size: clamp(18px, 2vw, 22px);
+  font-weight: 500;
+  line-height: 1.3;
+  color: var(--white);
+  display: inline-block;
+}
+a.research-title { transition: color 150ms ease; }
+a.research-title:hover { color: var(--light-blue); }
+a.research-title::after { content: ' ↗'; font-size: 0.75em; color: var(--text-mute); }
+.research-meta { font-size: 12.5px; color: var(--text-mute); letter-spacing: 0.04em; margin-top: 9px; }
+.research-note { font-size: 14.5px; color: rgba(255,255,255,0.75); line-height: 1.5; margin-top: 8px; }
+.research-tag {
+  display: inline-block; font-size: 10.5px; letter-spacing: 0.06em; text-transform: uppercase;
+  color: var(--text-mute); border: 1px solid var(--line); border-radius: 999px;
+  padding: 2px 9px; margin-left: 10px; vertical-align: middle;
 }
 
 /* Ask-your-own-question box (FAQ) */
@@ -864,8 +881,7 @@ footer { background: var(--navy-deep); padding: 48px 0 36px; border-top: 1px sol
   display: block;
 }
 .audience-teaser .audience-headline {
-  font-family: var(--font-italic);
-  font-style: italic;
+  font-family: var(--font-display);
   font-weight: 400;
   color: var(--light-blue);
   font-size: clamp(22px, 2.4vw, 28px);
@@ -948,8 +964,7 @@ footer { background: var(--navy-deep); padding: 48px 0 36px; border-top: 1px sol
 .founder-note .body p + p { margin-top: 14px; }
 .founder-note .sig {
   margin-top: 24px;
-  font-family: var(--font-italic);
-  font-style: italic;
+  font-family: var(--font-display);
   font-size: 22px;
   color: var(--light-blue);
   letter-spacing: -0.01em;
