@@ -975,3 +975,29 @@ a.research-title::after { content: ' ↗'; font-size: 0.75em; color: var(--text-
   *, *::before, *::after { animation: none !important; transition: none !important; }
   .reveal-on-scroll, .stagger > * { opacity: 1; transform: none; }
 }
+
+/* ── Legal pages (Privacy, Terms) ─────────────────────────── */
+.draft-banner {
+  max-width: 860px;
+  border: 1px solid var(--light-pink);
+  border-radius: var(--r-lg);
+  padding: 16px 20px;
+  margin-bottom: 34px;
+  font-size: 14.5px;
+  line-height: 1.5;
+  color: var(--text-mute);
+}
+.draft-banner strong { color: var(--light-pink); }
+
+.legal { max-width: 860px; }
+.legal h3 {
+  font-family: var(--font-display);
+  font-size: 22px;
+  margin: 38px 0 12px;
+}
+.legal h3:first-child { margin-top: 0; }
+.legal p { margin-bottom: 14px; color: var(--text-mute); line-height: 1.65; }
+.legal ul { margin: 0 0 14px 20px; color: var(--text-mute); line-height: 1.65; }
+.legal li { margin-bottom: 8px; }
+.legal a { color: var(--light-blue); }
+.legal .updated { font-size: 14px; margin-bottom: 30px; }
