@@ -1009,3 +1009,93 @@ a.research-title::after { content: ' ↗'; font-size: 0.75em; color: var(--text-
 .legal li { margin-bottom: 8px; }
 .legal a { color: var(--light-blue); }
 .legal .updated { font-size: 14px; margin-bottom: 30px; }
+
+/* ── Legal hub + document pages ───────────────────────────── */
+.legal-hero { padding-bottom: 20px; }
+.legal-crumb { margin-top: 22px; font-size: 14px; }
+.legal-crumb a { color: var(--light-blue); text-decoration: none; }
+.legal-crumb a:hover { text-decoration: underline; }
+
+/* Clause numbering */
+.legal h3 {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin: 44px 0 14px;
+}
+.legal h3 .clause-num {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--light-blue);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 3px 8px;
+  flex: none;
+}
+.legal h4 {
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--white);
+  margin: 26px 0 10px;
+}
+.legal strong { color: var(--white); font-weight: 600; }
+
+/* Hub cards */
+.legal-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 18px;
+  margin-bottom: 42px;
+}
+.legal-card {
+  display: flex;
+  flex-direction: column;
+  padding: 26px 26px 22px;
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  background: rgba(255, 255, 255, 0.02);
+  text-decoration: none;
+  color: inherit;
+  transition: border-color .25s ease, transform .25s ease, background .25s ease;
+}
+.legal-card:hover {
+  border-color: var(--light-blue);
+  background: rgba(191, 228, 249, 0.06);
+  transform: translateY(-3px);
+}
+.legal-card-tag {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--light-pink);
+  margin-bottom: 14px;
+}
+.legal-card h3 {
+  font-family: var(--font-display);
+  font-size: 21px;
+  line-height: 1.25;
+  margin-bottom: 12px;
+}
+.legal-card p {
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: var(--text-mute);
+  flex: 1;
+  margin-bottom: 18px;
+}
+.legal-card-go { font-size: 14px; font-weight: 600; color: var(--light-blue); }
+.legal-card:hover .arrow { transform: translateX(4px); }
+.legal-card .arrow { display: inline-block; transition: transform .25s ease; }
+
+.legal-principle {
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  padding: 30px 32px;
+  background: rgba(191, 228, 249, 0.04);
+  max-width: 860px;
+}
+.legal-principle h2 { font-size: 26px; margin: 12px 0 14px; }
+.legal-principle p { color: var(--text-mute); line-height: 1.65; margin: 0; }
