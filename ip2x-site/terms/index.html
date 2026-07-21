@@ -51,7 +51,10 @@
       <strong>Draft version 1.0.</strong> This document is a working draft and is not yet in force. It is published here for review and will change before the IP2X app launches. Questions to <a href="mailto:hello@ip2x.com">hello@ip2x.com</a>.
     </div>
 
-    <div class="legal reveal-on-scroll">
+    <!-- No reveal-on-scroll here: the body of a legal document is far taller
+         than the viewport, so an intersection threshold can never be met and
+         the text would never become visible. It must also render without JS. -->
+    <div class="legal">
       <h3><span class="clause-num">1</span>Introduction</h3>
       <p>These Terms &amp; Conditions (&quot;Terms&quot;) govern your access to and use of the IP2X platform and associated services.</p>
       <p>The Services are provided by IP2X Limited, a company incorporated in England and Wales (&quot;IP2X&quot;, &quot;we&quot;, &quot;our&quot; or &quot;us&quot;).</p>

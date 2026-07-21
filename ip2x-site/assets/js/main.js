@@ -28,6 +28,9 @@ const io = new IntersectionObserver((entries) => {
       io.unobserve(e.target);
     }
   });
-}, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+// Thresholds must include 0. With only 0.12, an element taller than about
+// 8x the viewport can never show 12% of itself at once, so the callback never
+// fires and the content stays at opacity 0 permanently.
+}, { threshold: [0, 0.12], rootMargin: '0px 0px -60px 0px' });
 
 document.querySelectorAll('.reveal-on-scroll, .stagger').forEach(el => io.observe(el));
