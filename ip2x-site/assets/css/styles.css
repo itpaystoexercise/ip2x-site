@@ -36,6 +36,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+  /* Playfair Display defaults to old-style figures, so its '2' sits at 75% of
+     cap height — the IP2X wordmark looked broken. Force lining (cap-height)
+     figures. Manrope and Bricolage are already lining, so nothing else moves. */
+  font-variant-numeric: lining-nums;
+  font-feature-settings: "lnum" 1;
 }
 body::before {
   content: '';
@@ -125,6 +130,9 @@ h3 { font-size: clamp(20px, 2vw, 26px); font-weight: 600; line-height: 1.25; }
   font-size: 22px;
   letter-spacing: -0.02em;
   display: flex; align-items: center; gap: 10px;
+  /* Belt and braces: the wordmark must never fall back to old-style figures. */
+  font-variant-numeric: lining-nums;
+  font-feature-settings: "lnum" 1;
 }
 .brand .dot {
   width: 8px; height: 8px; border-radius: 50%;
