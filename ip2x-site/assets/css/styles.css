@@ -734,9 +734,11 @@ footer { background: var(--navy-deep); padding: 48px 0 36px; border-top: 1px sol
 
 /* Video showcase — Meet Pep & Pip */
 .video-showcase { margin-top: 28px; }
+.video-showcase .eyebrow { display: block; margin-bottom: 14px; }
 .video-showcase .lede { margin-top: 10px; max-width: 640px; }
 .video-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 24px; }
-@media (max-width: 900px) { .video-grid { grid-template-columns: 1fr; } }
+@media (max-width: 900px) { .video-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .video-grid { grid-template-columns: 1fr; } }
 .video-card {
   border: 1px solid var(--line);
   border-radius: var(--r-md);
