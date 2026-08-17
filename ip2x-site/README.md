@@ -16,7 +16,9 @@ ip2x-site/
 │   │   └── styles.css      ← All styling. Brand tokens at the top.
 │   ├── js/
 │   │   └── main.js         ← Nav scroll, FAQ accordions, scroll-reveal
-│   └── img/                ← For founder photos and any future imagery
+│   ├── img/                ← For founder photos and any future imagery
+│   │   └── video-posters/  ← Click-to-play poster frames for the exercise clips
+│   └── video/              ← Exercise demo clips (Pep & Pip)
 ├── README.md
 └── .gitignore
 ```
@@ -36,6 +38,8 @@ URLs once deployed:
 **Founder details** — search `team-grid` in `index.html`. To swap initial-circles for real photos, replace the `<div class="avatar">XX</div>` with `<img class="avatar" src="assets/img/firstname.jpg" alt="Name">` — the existing CSS will size and shape them correctly.
 
 **FAQs** — search `faq-list` in `index.html`. Each `<div class="faq-item">` is one Q+A.
+
+**Exercise videos** — search `video-grid` in `index.html`. Clips live in `assets/video/`, poster frames in `assets/img/video-posters/`. Videos are click-to-play (`preload="none"`), so adding a clip costs no page weight until someone presses play.
 
 **Partner page copy** — `partners/index.html`. The three audience cards correspond to GLP-1 Providers, Insurers and Employers.
 
