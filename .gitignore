@@ -2,6 +2,7 @@
 Dropbox/
 Screenshots/
 stephen-website-edits*.pdf
+/docs/
 
 # Source legal documents. Leading slash is required: git has core.ignorecase=true
 # on macOS, so a bare "Terms/" would also match the published ip2x-site/terms/ page.
